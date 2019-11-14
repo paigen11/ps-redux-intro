@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import './CounterControl.css';
 
-const counterControl = props => (
-  <div className="CounterControl" onClick={props.clicked}>
-    {props.label}
+const counterControl = memo(({ label, clicked }) => (
+  <div className="CounterControl" onClick={clicked}>
+    {label}
   </div>
-);
+));
 
 export default counterControl;
